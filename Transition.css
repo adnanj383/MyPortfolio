@@ -1,0 +1,41 @@
+.second{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: 20%;
+	right: 20%;
+	background-color: red;
+	animation-name: changeShape, bounce;
+	animation-duration: 1s,1s,1s;
+	animation-iteration-count: infinite,infinite,infinite;
+	animation-direction: alternate,alternate,alternate;
+}
+
+@keyframes bounce{
+	0%{
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-100%);
+	}
+	75%{
+		transform: translateY(50%);
+	}
+	100%{
+		transform: translateY(-50%);
+	}
+
+}
+
+
+
+@keyframes changeShape{
+0%{
+	border-radius: 0%;
+	transform: rotate(0deg);
+}
+100%{
+	border-radius: 50%;
+	trnsform: rotate(360deg);
+}
+}
